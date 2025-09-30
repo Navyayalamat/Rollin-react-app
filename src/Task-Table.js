@@ -13,8 +13,8 @@ const TaskTable = ({seteditingTask}) => {
                         <th>Id</th>
                         <th>Task Name</th>
                         <th>Description</th>
-                        <th>Created</th>
-                        <th>Due</th>
+                        <th>Created Date</th>
+                        <th>Due Date</th>
                         <th>Completed</th>
                         <th></th>
                         <th></th>
