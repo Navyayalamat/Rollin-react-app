@@ -2,7 +2,7 @@
 
 This project is a React Task Management Application demonstrating CRUD operations (Create, Read, Update, Delete) with form validations.
 
-✨ **Features**
+✨ **Features:**
 
   ➕ Create: Add tasks with title, description, created date, due date and completion status.
   
@@ -22,8 +22,7 @@ This project is a React Task Management Application demonstrating CRUD operation
   
   - Error messages are displayed at the top of the form for better visibility.
 
-
-**🛠️ Tech Stack**
+**🛠️ Tech Stack:**
 
  - React (hooks + context API for state management)
   
@@ -33,24 +32,26 @@ This project is a React Task Management Application demonstrating CRUD operation
 
 
 
-**🚀 Getting Started**
+**Getting Started:**
 
-**Clone the repo**
+ - **Clone the repo**
+  
+    git clone https://github.com/Navyayalamat/Rollin-react-app.git
+    cd Rollin-react-app
+  
+  
+ - **Install dependencies**
+  
+    npm install
+  
+  
+ - **Run the development server**
+  
+    npm start
 
-git clone https://github.com/Navyayalamat/Rollin-react-app.git
-cd Rollin-react-app
+**Preview:**
 
-
-**Install dependencies**
-
-npm install
-
-
-**Run the development server**
-
-npm start
-
-Application will be like this 
+Here’s a quick look at the application in action:
 
 <img width="1887" height="777" alt="image" src="https://github.com/user-attachments/assets/64ce91e8-5f6f-4a00-9c04-ea1e51cc802d" />
 
