@@ -11,3 +11,37 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.task-form{
+  margin-left: 10%;
+}
+
+.Task-form-container{
+  max-width: 50%;
+  margin: 30px auto 30px;
+}
+
+.pull-left{
+  float: left;
+}
+
+.ml-10{
+  margin-left: 10px;
+}
+
+label{
+  font-weight: bold;
+}
+
+.error-message{
+  font-size: 14px;
+  font-family: 'arial';
+  color: red;
+}
+
+.mandatory{
+  font-size: 16px;
+  font-weight: bold;
+  margin-left: 2px;
+}
+
