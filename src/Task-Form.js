@@ -53,7 +53,7 @@ function TaskForm({editingTask,seteditingTask}){
     if (!formData.created) return 'Created date is required';
     if (!formData.due) return 'Due date is required';
     if (new Date(formData.due) < new Date(formData.created))
-      return 'Due date cannot be before created date';
+      return 'Error:Due date cannot be earlier than the created date.';
     if (
       tasks &&
       tasks.some(

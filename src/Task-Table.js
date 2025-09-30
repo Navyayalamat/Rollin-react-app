@@ -1,6 +1,7 @@
 import {useContext} from 'react';
 import { TaskContext } from './TaskContext';
 import { FaEdit, FaTrash } from "react-icons/fa";
+import { format } from "date-fns";
 
 const TaskTable = ({seteditingTask}) => {
     const {tasks,deleteTask} = useContext(TaskContext)
@@ -10,14 +11,14 @@ const TaskTable = ({seteditingTask}) => {
             <table className="table table-striped table-bordered StandardTable">
                 <thead className="yellow-table">
                     <tr>
-                        <th>Id</th>
+                        <th>#ID</th>
                         <th>Task Name</th>
                         <th>Description</th>
                         <th>Created Date</th>
                         <th>Due Date</th>
                         <th>Completed</th>
-                        <th></th>
-                        <th></th>
+                        <th>Edit</th>
+                        <th>Delete</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -26,8 +27,8 @@ const TaskTable = ({seteditingTask}) => {
                             <td>{task.id}</td>
                             <td>{task.title}</td>
                             <td>{task.description}</td>
-                            <td>{task.created}</td>
-                            <td>{task.due}</td>
+                            <td> {format(new Date(task.created), "dd MMM yyyy")}</td>
+                            <td>{format(new Date(task.due), "dd MMM yyyy")}</td>
                             <td>{task.completed.toString()}</td>
                             <td><button className="btn" onClick={()=> seteditingTask(task)}><FaEdit /></button></td>
                             <td><button className="btn" onClick={()=> deleteTask(task.id)}> <FaTrash /></button></td>
