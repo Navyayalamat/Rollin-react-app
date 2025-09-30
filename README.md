@@ -52,5 +52,6 @@ npm start
 
 Application will be like this 
 
-<img width="1053" height="568" alt="image" src="https://github.com/user-attachments/assets/7dc0e2fe-ead2-4779-8967-46b6b8b490d8" />
+<img width="1887" height="777" alt="image" src="https://github.com/user-attachments/assets/64ce91e8-5f6f-4a00-9c04-ea1e51cc802d" />
+
 
