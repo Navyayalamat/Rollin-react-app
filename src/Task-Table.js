@@ -1,13 +1,14 @@
 import {useContext} from 'react';
 import { TaskContext } from './TaskContext';
+import { FaEdit, FaTrash } from "react-icons/fa";
 
 const TaskTable = ({seteditingTask}) => {
     const {tasks,deleteTask} = useContext(TaskContext)
     return(
         <div className="row task-table">
-            <h2 className="mb-3">Tasks List</h2>
-            <table className="table table-striped table-bordered">
-                <thead className="table-dark">
+            <h3 className="mb-3 white-text">Tasks List</h3>
+            <table className="table table-striped table-bordered StandardTable">
+                <thead className="yellow-table">
                     <tr>
                         <th>Id</th>
                         <th>Task Name</th>
@@ -15,8 +16,8 @@ const TaskTable = ({seteditingTask}) => {
                         <th>Created</th>
                         <th>Due</th>
                         <th>Completed</th>
-                        <td></td>
-                        <td></td>
+                        <th></th>
+                        <th></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -28,8 +29,8 @@ const TaskTable = ({seteditingTask}) => {
                             <td>{task.created}</td>
                             <td>{task.due}</td>
                             <td>{task.completed.toString()}</td>
-                            <td><button className="btn btn-primary btn-sm" onClick={()=> seteditingTask(task)}>Edit</button></td>
-                            <td><button className="btn btn-primary btn-sm" onClick={()=> deleteTask(task.id)}>Delete</button></td>
+                            <td><button className="btn" onClick={()=> seteditingTask(task)}><FaEdit /></button></td>
+                            <td><button className="btn" onClick={()=> deleteTask(task.id)}> <FaTrash /></button></td>
                         </tr>
                     ))}
 

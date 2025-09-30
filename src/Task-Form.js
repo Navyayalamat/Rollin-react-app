@@ -48,7 +48,7 @@ function TaskForm({editingTask,seteditingTask}){
 
    // for validations 
    const validateForm = () => {
-    if (!formData.title.trim()) return 'Title is required';
+    if (!formData.title.trim()) return 'Task name is required';
     if (!formData.description.trim()) return 'Description is required';
     if (!formData.created) return 'Created date is required';
     if (!formData.due) return 'Due date is required';
@@ -62,7 +62,7 @@ function TaskForm({editingTask,seteditingTask}){
           (!editingTask || task.id !== editingTask.id)
       )
     )
-      return 'Title must be unique';
+      return 'Task name must be unique';
 
     return '';
   };
@@ -78,9 +78,11 @@ function TaskForm({editingTask,seteditingTask}){
 
     if (editingTask) {
       updateTask(editingTask.id, formData);
+      alert('Task updated Successfully')
       seteditingTask(null);
     } else {
       addTask(formData);
+      alert('Task added Successfully')
     }
 
     setFormData({ title: '', description: '', completed: false, due: '', created: '' });
@@ -91,14 +93,14 @@ function TaskForm({editingTask,seteditingTask}){
 
   return (
     <div className="row">
-        <div className="Task-form-container container mt-5 col-6">
-          <h2>Task Form</h2>
+        <div className="Task-form-container container col-6 white-text">
+          <h3>Task Form</h3>
             <p className="text-danger error-message">
                   {error}
             </p>
           <form onSubmit={handleSubmit} className="mt-6 task-form">
             <div className="row mb-3">
-                <label className="col-sm-2 col-form-lab el col-form-label-sm text-start">Task Name<span className='error-message mandatory'>*</span></label>
+                <label className="col-sm-2 col-form-lab el col-form-label-sm text-start white-text">Task Name<span className='error-message mandatory'>*</span></label>
                 <div className="col-sm-6">
                   <input
                   type="text"
@@ -111,14 +113,14 @@ function TaskForm({editingTask,seteditingTask}){
                 </div>
             </div>
             <div className="row mb-3">
-                <label className="col-sm-2 col-form-label col-form-label-sm text-start">Description<span className='error-message mandatory'>*</span></label>
+                <label className="col-sm-2 col-form-label col-form-label-sm text-start white-text">Description<span className='error-message mandatory'>*</span></label>
                 <div className="col-sm-6">
                   <textarea className="form-control" name="description" value={formData.description} onChange={handleChange} >
                   </textarea>
                 </div>
             </div>
             <div className="row mb-3">
-                <label className="col-sm-2 col-form-label col-form-label-sm text-start">Created<span className='error-message mandatory'>*</span></label>
+                <label className="col-sm-2 col-form-label col-form-label-sm text-start white-text">Created Date<span className='error-message mandatory'>*</span></label>
                 <div className="col-sm-6">
                   <input
                   type="date"
@@ -131,7 +133,7 @@ function TaskForm({editingTask,seteditingTask}){
                 </div>
             </div>
             <div className="row mb-3">
-                <label className="col-sm-2 col-form-label col-form-label-sm text-start">Due<span className='error-message mandatory'>*</span></label>
+                <label className="col-sm-2 col-form-label col-form-label-sm text-start white-text">Due Date<span className='error-message mandatory'>*</span></label>
                 <div className="col-sm-6">
                   <input
                   type="date"
@@ -145,11 +147,12 @@ function TaskForm({editingTask,seteditingTask}){
                 </div>
             </div>
             <div className="row mb-3">
-                <label className="col-sm-2 col-form-label col-form-label-sm text-start">Completed {formData.completed}</label>
+                <label className="col-sm-2 col-form-label col-form-label-sm text-start white-text">Completed {formData.completed}</label>
                <input className="form-check-input ml-10 mt-2" type="checkbox" id="completed"  name="completed" checked={completed} onChange={handleChange}/>
             </div>
+            
           
-            <button type="submit" className="btn btn-primary float-start">{edited ? 'Update' : 'Add'}</button>
+            <button type="submit" className="btn btn-primary float-start">{edited ? 'Update' : 'Add Task'}</button>
           </form>
         </div>
     </div>

@@ -5,13 +5,32 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #252525 !important;
 }
-
+.icon-button {
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 8px;
+        /* Add styling for hover, focus, etc. */
+    }
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
 
+.yellow-table{
+  background-color: #f0e731 !important;
+  color: #252525
+}
+
+.logo-size{
+      height: 150px;
+    width: 250px;
+}
+.StandardTable thead th{
+    background: #f0e731; 
+}
 .task-form{
   margin-left: 10%;
 }
@@ -37,6 +56,13 @@ label{
   font-size: 14px;
   font-family: 'arial';
   color: red;
+  font-weight: bold;
+}
+
+.success-message{
+ font-size: 14px;
+  font-family: 'arial';
+  color: #fff;
 }
 
 .mandatory{
@@ -45,3 +71,6 @@ label{
   margin-left: 2px;
 }
 
+.white-text{
+  color: #fff;
+}

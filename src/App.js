@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+import logo from './logo.png';
 import './App.css';
 import TaskTable from'./Task-Table';
 import TaskForm from "./Task-Form"
@@ -9,6 +9,7 @@ function App() {
   const [editingTask,seteditingTask] = useState(null)
   return (
     <TaskProvider>
+        <img src={logo} alt="Logo" className='logo-size' />
         <div className="App">
           <TaskForm
           editingTask={editingTask}

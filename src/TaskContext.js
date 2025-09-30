@@ -37,6 +37,7 @@ export const TaskProvider = ({children})=>{
     const deleteTask = (id)=>{
         axios.delete(`${url}/${id}`).then(res => {
           setTasks(tasks.filter((task) => task.id !== id))
+          alert("Deleted Sucessfully")
         })
     }
 
