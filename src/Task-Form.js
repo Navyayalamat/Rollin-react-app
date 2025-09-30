@@ -1,5 +1,5 @@
 
-import React, { useContext, useEffect, useState } from 'react';
+import  { useContext, useEffect, useState } from 'react';
 import { TaskContext } from './TaskContext';
 function TaskForm({editingTask,seteditingTask}){
   const {addTask,updateTask} = useContext(TaskContext);
@@ -92,7 +92,7 @@ function TaskForm({editingTask,seteditingTask}){
   return (
     <div className="row">
         <div className="Task-form-container container mt-5 col-6">
-          <h2>Task Added Form</h2>
+          <h2>Task Form</h2>
             <p className="text-danger error-message">
                   {error}
             </p>
