@@ -1,39 +1,39 @@
-# Rollin-react-app
+# Rollin'-react-app
 
 This project is a React Task Management Application demonstrating CRUD operations (Create, Read, Update, Delete) with form validations.
 
-✨ Features
+✨ **Features**
 
-➕ Create: Add tasks with title, description, created date, and due date.
+  ➕ Create: Add tasks with title, description, created date, due date and completion status.
+  
+  📖 Read: Display all tasks in a responsive table.
+  
+  ✏️ Update: Edit existing tasks and update completion status.
+  
+  🗑️ Delete: Remove tasks from the list.
 
-📖 Read: Display all tasks in a responsive table.
+**✅ Validations:**
 
-✏️ Update: Edit existing tasks and update completion status.
-
-🗑️ Delete: Remove tasks from the list.
-
-✅ Validations:
-
-Required fields: title, description, created date, due date.
-
-Due date cannot be before the created date.
-
-Task title must be unique.
-
-Inline error messages displayed next to fields.
-
-
-🛠️ Tech Stack
-
-React (hooks + context API for state management)
-
-Bootstrap for styling
-
-React Context for global task state
+  - Required fields: title, description, created date, due date.
+  
+  - Due date cannot be before the created date.
+  
+  - Task title must be unique.
+  
+  - Error messages are displayed at the top of the form for better visibility.
 
 
+**🛠️ Tech Stack**
 
-🚀 Getting Started
+ - React (hooks + context API for state management)
+  
+ - Bootstrap for styling
+  
+ - React Context for global task state
+
+
+
+**🚀 Getting Started**
 
 **Clone the repo**
 
