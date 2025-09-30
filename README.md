@@ -50,6 +50,7 @@ npm install
 
 npm start
 
-Application will be seen like this 
+Application will be like this 
 
-<img width="860" height="511" alt="image" src="https://github.com/user-attachments/assets/86024fc5-651c-4585-89d3-ed4fc181a79f" />
+<img width="1053" height="568" alt="image" src="https://github.com/user-attachments/assets/7dc0e2fe-ead2-4779-8967-46b6b8b490d8" />
+
